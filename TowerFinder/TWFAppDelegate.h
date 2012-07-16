@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SettingsTableView.h"
 
 @interface TWFAppDelegate : UIResponder <UIApplicationDelegate, UITabBarControllerDelegate>
 

@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		094BBFCE15B385D5005468E8 /* TowerListTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 094BBFCD15B385D5005468E8 /* TowerListTableView.m */; };
+		094BBFD215B3885D005468E8 /* FCCSearchTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 094BBFD115B3885D005468E8 /* FCCSearchTableView.m */; };
+		094BBFD515B45A71005468E8 /* SearchRadiusTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 094BBFD415B45A71005468E8 /* SearchRadiusTableView.m */; };
+		094BBFDE15B4823C005468E8 /* icon-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 094BBFDA15B4823C005468E8 /* icon-small.png */; };
+		094BBFDF15B4823C005468E8 /* icon-small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 094BBFDB15B4823C005468E8 /* icon-small@2x.png */; };
+		094BBFE315B48255005468E8 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 094BBFE215B48255005468E8 /* icon@2x.png */; };
+		094BBFE515B48264005468E8 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 094BBFE415B48264005468E8 /* icon.png */; };
 		09A76A7F15AF676D003D00A4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09A76A7E15AF676D003D00A4 /* UIKit.framework */; };
 		09A76A8115AF676D003D00A4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09A76A8015AF676D003D00A4 /* Foundation.framework */; };
 		09A76A8315AF676D003D00A4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09A76A8215AF676D003D00A4 /* CoreGraphics.framework */; };
@@ -16,34 +23,61 @@
 		09A76A9215AF676D003D00A4 /* TWFFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A76A9115AF676D003D00A4 /* TWFFirstViewController.m */; };
 		09A76A9415AF676D003D00A4 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 09A76A9315AF676D003D00A4 /* first.png */; };
 		09A76A9615AF676D003D00A4 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09A76A9515AF676D003D00A4 /* first@2x.png */; };
-		09A76A9915AF676D003D00A4 /* TWFSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A76A9815AF676D003D00A4 /* TWFSecondViewController.m */; };
 		09A76A9B15AF676D003D00A4 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 09A76A9A15AF676D003D00A4 /* second.png */; };
 		09A76A9D15AF676D003D00A4 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09A76A9C15AF676D003D00A4 /* second@2x.png */; };
 		09A76AA015AF676D003D00A4 /* TWFFirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09A76A9E15AF676D003D00A4 /* TWFFirstViewController.xib */; };
 		09A76AA315AF676D003D00A4 /* TWFSecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09A76AA115AF676D003D00A4 /* TWFSecondViewController.xib */; };
+		09A76AAB15AF6AF6003D00A4 /* gear.png in Resources */ = {isa = PBXBuildFile; fileRef = 09A76AA915AF6AF5003D00A4 /* gear.png */; };
+		09A76AAC15AF6AF6003D00A4 /* gear@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09A76AAA15AF6AF5003D00A4 /* gear@2x.png */; };
+		09A76AB015AF915D003D00A4 /* SettingsTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A76AAE15AF915D003D00A4 /* SettingsTableView.m */; };
+		09A76AB115AF915D003D00A4 /* SettingsTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09A76AAF15AF915D003D00A4 /* SettingsTableView.xib */; };
+		09A76ABE15AFB6A6003D00A4 /* Compass-Ring.png in Resources */ = {isa = PBXBuildFile; fileRef = 09A76ABB15AFB6A6003D00A4 /* Compass-Ring.png */; };
+		09A76AC015AFB7E3003D00A4 /* Compass-Arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 09A76ABF15AFB7E3003D00A4 /* Compass-Arrow.png */; };
+		09A76AC215AFB89A003D00A4 /* Compass-BG.png in Resources */ = {isa = PBXBuildFile; fileRef = 09A76AC115AFB899003D00A4 /* Compass-BG.png */; };
+		09A76AC815AFBABC003D00A4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09A76AC715AFBABC003D00A4 /* CoreLocation.framework */; };
+		09A76ACB15AFBAF2003D00A4 /* CoreLocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A76ACA15AFBAF2003D00A4 /* CoreLocationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		09A76A7A15AF676D003D00A4 /* TowerFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TowerFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		094BBFCC15B385D5005468E8 /* TowerListTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TowerListTableView.h; sourceTree = "<group>"; };
+		094BBFCD15B385D5005468E8 /* TowerListTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TowerListTableView.m; sourceTree = "<group>"; };
+		094BBFD015B3885D005468E8 /* FCCSearchTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCCSearchTableView.h; sourceTree = "<group>"; };
+		094BBFD115B3885D005468E8 /* FCCSearchTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCCSearchTableView.m; sourceTree = "<group>"; };
+		094BBFD315B45A71005468E8 /* SearchRadiusTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchRadiusTableView.h; sourceTree = "<group>"; };
+		094BBFD415B45A71005468E8 /* SearchRadiusTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchRadiusTableView.m; sourceTree = "<group>"; };
+		094BBFDA15B4823C005468E8 /* icon-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-small.png"; sourceTree = "<group>"; };
+		094BBFDB15B4823C005468E8 /* icon-small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-small@2x.png"; sourceTree = "<group>"; };
+		094BBFE215B48255005468E8 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
+		094BBFE415B48264005468E8 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		09A76A7A15AF676D003D00A4 /* TowerRadar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TowerRadar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09A76A7E15AF676D003D00A4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		09A76A8015AF676D003D00A4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		09A76A8215AF676D003D00A4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		09A76A8615AF676D003D00A4 /* TowerFinder-Info.plist */ = {isa = PBXFileReference; path = "TowerFinder-Info.plist"; sourceTree = "<group>"; };
+		09A76A8615AF676D003D00A4 /* TowerFinder-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TowerFinder-Info.plist"; sourceTree = "<group>"; };
 		09A76A8815AF676D003D00A4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		09A76A8A15AF676D003D00A4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		09A76A8C15AF676D003D00A4 /* TowerFinder-Prefix.pch */ = {isa = PBXFileReference; path = "TowerFinder-Prefix.pch"; sourceTree = "<group>"; };
-		09A76A8D15AF676D003D00A4 /* TWFAppDelegate.h */ = {isa = PBXFileReference; path = TWFAppDelegate.h; sourceTree = "<group>"; };
+		09A76A8C15AF676D003D00A4 /* TowerFinder-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TowerFinder-Prefix.pch"; sourceTree = "<group>"; };
+		09A76A8D15AF676D003D00A4 /* TWFAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TWFAppDelegate.h; sourceTree = "<group>"; };
 		09A76A8E15AF676D003D00A4 /* TWFAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TWFAppDelegate.m; sourceTree = "<group>"; };
-		09A76A9015AF676D003D00A4 /* TWFFirstViewController.h */ = {isa = PBXFileReference; path = TWFFirstViewController.h; sourceTree = "<group>"; };
+		09A76A9015AF676D003D00A4 /* TWFFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TWFFirstViewController.h; sourceTree = "<group>"; };
 		09A76A9115AF676D003D00A4 /* TWFFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TWFFirstViewController.m; sourceTree = "<group>"; };
 		09A76A9315AF676D003D00A4 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		09A76A9515AF676D003D00A4 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		09A76A9715AF676D003D00A4 /* TWFSecondViewController.h */ = {isa = PBXFileReference; path = TWFSecondViewController.h; sourceTree = "<group>"; };
-		09A76A9815AF676D003D00A4 /* TWFSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TWFSecondViewController.m; sourceTree = "<group>"; };
 		09A76A9A15AF676D003D00A4 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		09A76A9C15AF676D003D00A4 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		09A76A9F15AF676D003D00A4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/TWFFirstViewController.xib; sourceTree = "<group>"; };
 		09A76AA215AF676D003D00A4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/TWFSecondViewController.xib; sourceTree = "<group>"; };
+		09A76AA915AF6AF5003D00A4 /* gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gear.png; sourceTree = "<group>"; };
+		09A76AAA15AF6AF5003D00A4 /* gear@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gear@2x.png"; sourceTree = "<group>"; };
+		09A76AAD15AF915D003D00A4 /* SettingsTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsTableView.h; sourceTree = "<group>"; };
+		09A76AAE15AF915D003D00A4 /* SettingsTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsTableView.m; sourceTree = "<group>"; };
+		09A76AAF15AF915D003D00A4 /* SettingsTableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsTableView.xib; sourceTree = "<group>"; };
+		09A76ABB15AFB6A6003D00A4 /* Compass-Ring.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Compass-Ring.png"; sourceTree = "<group>"; };
+		09A76ABF15AFB7E3003D00A4 /* Compass-Arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Compass-Arrow.png"; sourceTree = "<group>"; };
+		09A76AC115AFB899003D00A4 /* Compass-BG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Compass-BG.png"; sourceTree = "<group>"; };
+		09A76AC715AFBABC003D00A4 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		09A76AC915AFBAE5003D00A4 /* CoreLocationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreLocationController.h; sourceTree = "<group>"; };
+		09A76ACA15AFBAF2003D00A4 /* CoreLocationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreLocationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09A76AC815AFBABC003D00A4 /* CoreLocation.framework in Frameworks */,
 				09A76A7F15AF676D003D00A4 /* UIKit.framework in Frameworks */,
 				09A76A8115AF676D003D00A4 /* Foundation.framework in Frameworks */,
 				09A76A8315AF676D003D00A4 /* CoreGraphics.framework in Frameworks */,
@@ -63,6 +98,8 @@
 		09A76A6F15AF676D003D00A4 = {
 			isa = PBXGroup;
 			children = (
+				094BBFE415B48264005468E8 /* icon.png */,
+				094BBFE215B48255005468E8 /* icon@2x.png */,
 				09A76A8415AF676D003D00A4 /* TowerFinder */,
 				09A76A7D15AF676D003D00A4 /* Frameworks */,
 				09A76A7B15AF676D003D00A4 /* Products */,
@@ -72,7 +109,7 @@
 		09A76A7B15AF676D003D00A4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				09A76A7A15AF676D003D00A4 /* TowerFinder.app */,
+				09A76A7A15AF676D003D00A4 /* TowerRadar.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -80,6 +117,7 @@
 		09A76A7D15AF676D003D00A4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				09A76AC715AFBABC003D00A4 /* CoreLocation.framework */,
 				09A76A7E15AF676D003D00A4 /* UIKit.framework */,
 				09A76A8015AF676D003D00A4 /* Foundation.framework */,
 				09A76A8215AF676D003D00A4 /* CoreGraphics.framework */,
@@ -90,16 +128,22 @@
 		09A76A8415AF676D003D00A4 /* TowerFinder */ = {
 			isa = PBXGroup;
 			children = (
+				09A76ACC15AFBB01003D00A4 /* Resources */,
+				09A76AC915AFBAE5003D00A4 /* CoreLocationController.h */,
+				09A76ACA15AFBAF2003D00A4 /* CoreLocationController.m */,
 				09A76A8D15AF676D003D00A4 /* TWFAppDelegate.h */,
 				09A76A8E15AF676D003D00A4 /* TWFAppDelegate.m */,
 				09A76A9015AF676D003D00A4 /* TWFFirstViewController.h */,
 				09A76A9115AF676D003D00A4 /* TWFFirstViewController.m */,
-				09A76A9315AF676D003D00A4 /* first.png */,
-				09A76A9515AF676D003D00A4 /* first@2x.png */,
-				09A76A9715AF676D003D00A4 /* TWFSecondViewController.h */,
-				09A76A9815AF676D003D00A4 /* TWFSecondViewController.m */,
-				09A76A9A15AF676D003D00A4 /* second.png */,
-				09A76A9C15AF676D003D00A4 /* second@2x.png */,
+				09A76AAD15AF915D003D00A4 /* SettingsTableView.h */,
+				09A76AAE15AF915D003D00A4 /* SettingsTableView.m */,
+				094BBFD315B45A71005468E8 /* SearchRadiusTableView.h */,
+				094BBFD415B45A71005468E8 /* SearchRadiusTableView.m */,
+				094BBFCC15B385D5005468E8 /* TowerListTableView.h */,
+				094BBFCD15B385D5005468E8 /* TowerListTableView.m */,
+				094BBFD015B3885D005468E8 /* FCCSearchTableView.h */,
+				094BBFD115B3885D005468E8 /* FCCSearchTableView.m */,
+				09A76AAF15AF915D003D00A4 /* SettingsTableView.xib */,
 				09A76A9E15AF676D003D00A4 /* TWFFirstViewController.xib */,
 				09A76AA115AF676D003D00A4 /* TWFSecondViewController.xib */,
 				09A76A8515AF676D003D00A4 /* Supporting Files */,
@@ -118,12 +162,30 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		09A76ACC15AFBB01003D00A4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				094BBFDA15B4823C005468E8 /* icon-small.png */,
+				094BBFDB15B4823C005468E8 /* icon-small@2x.png */,
+				09A76ABF15AFB7E3003D00A4 /* Compass-Arrow.png */,
+				09A76ABB15AFB6A6003D00A4 /* Compass-Ring.png */,
+				09A76AC115AFB899003D00A4 /* Compass-BG.png */,
+				09A76AA915AF6AF5003D00A4 /* gear.png */,
+				09A76AAA15AF6AF5003D00A4 /* gear@2x.png */,
+				09A76A9315AF676D003D00A4 /* first.png */,
+				09A76A9515AF676D003D00A4 /* first@2x.png */,
+				09A76A9A15AF676D003D00A4 /* second.png */,
+				09A76A9C15AF676D003D00A4 /* second@2x.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		09A76A7915AF676D003D00A4 /* TowerFinder */ = {
+		09A76A7915AF676D003D00A4 /* TowerRadar */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 09A76AA615AF676D003D00A4 /* Build configuration list for PBXNativeTarget "TowerFinder" */;
+			buildConfigurationList = 09A76AA615AF676D003D00A4 /* Build configuration list for PBXNativeTarget "TowerRadar" */;
 			buildPhases = (
 				09A76A7615AF676D003D00A4 /* Sources */,
 				09A76A7715AF676D003D00A4 /* Frameworks */,
@@ -133,9 +195,9 @@
 			);
 			dependencies = (
 			);
-			name = TowerFinder;
+			name = TowerRadar;
 			productName = TowerFinder;
-			productReference = 09A76A7A15AF676D003D00A4 /* TowerFinder.app */;
+			productReference = 09A76A7A15AF676D003D00A4 /* TowerRadar.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -144,7 +206,7 @@
 		09A76A7115AF676D003D00A4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0430;
 			};
 			buildConfigurationList = 09A76A7415AF676D003D00A4 /* Build configuration list for PBXProject "TowerFinder" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -158,7 +220,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				09A76A7915AF676D003D00A4 /* TowerFinder */,
+				09A76A7915AF676D003D00A4 /* TowerRadar */,
 			);
 		};
 /* End PBXProject section */
@@ -175,6 +237,16 @@
 				09A76A9D15AF676D003D00A4 /* second@2x.png in Resources */,
 				09A76AA015AF676D003D00A4 /* TWFFirstViewController.xib in Resources */,
 				09A76AA315AF676D003D00A4 /* TWFSecondViewController.xib in Resources */,
+				09A76AAB15AF6AF6003D00A4 /* gear.png in Resources */,
+				09A76AAC15AF6AF6003D00A4 /* gear@2x.png in Resources */,
+				09A76AB115AF915D003D00A4 /* SettingsTableView.xib in Resources */,
+				09A76ABE15AFB6A6003D00A4 /* Compass-Ring.png in Resources */,
+				09A76AC015AFB7E3003D00A4 /* Compass-Arrow.png in Resources */,
+				09A76AC215AFB89A003D00A4 /* Compass-BG.png in Resources */,
+				094BBFDE15B4823C005468E8 /* icon-small.png in Resources */,
+				094BBFDF15B4823C005468E8 /* icon-small@2x.png in Resources */,
+				094BBFE315B48255005468E8 /* icon@2x.png in Resources */,
+				094BBFE515B48264005468E8 /* icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,7 +260,11 @@
 				09A76A8B15AF676D003D00A4 /* main.m in Sources */,
 				09A76A8F15AF676D003D00A4 /* TWFAppDelegate.m in Sources */,
 				09A76A9215AF676D003D00A4 /* TWFFirstViewController.m in Sources */,
-				09A76A9915AF676D003D00A4 /* TWFSecondViewController.m in Sources */,
+				09A76AB015AF915D003D00A4 /* SettingsTableView.m in Sources */,
+				09A76ACB15AFBAF2003D00A4 /* CoreLocationController.m in Sources */,
+				094BBFCE15B385D5005468E8 /* TowerListTableView.m in Sources */,
+				094BBFD215B3885D005468E8 /* FCCSearchTableView.m in Sources */,
+				094BBFD515B45A71005468E8 /* SearchRadiusTableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,6 +304,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -243,6 +320,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -253,7 +331,8 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -262,6 +341,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -273,6 +354,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TowerFinder/TowerFinder-Prefix.pch";
 				INFOPLIST_FILE = "TowerFinder/TowerFinder-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -281,10 +363,13 @@
 		09A76AA815AF676D003D00A4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TowerFinder/TowerFinder-Prefix.pch";
 				INFOPLIST_FILE = "TowerFinder/TowerFinder-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -301,13 +386,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		09A76AA615AF676D003D00A4 /* Build configuration list for PBXNativeTarget "TowerFinder" */ = {
+		09A76AA615AF676D003D00A4 /* Build configuration list for PBXNativeTarget "TowerRadar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				09A76AA715AF676D003D00A4 /* Debug */,
 				09A76AA815AF676D003D00A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -10,8 +10,6 @@
 
 #import "TWFFirstViewController.h"
 
-#import "TWFSecondViewController.h"
-
 @implementation TWFAppDelegate
 
 @synthesize window = _window;
@@ -21,11 +19,33 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if ([defaults valueForKey:@"searchRadius"] == nil) {
+        [defaults setValue:[NSNumber numberWithInt:50] forKey:@"searchRadius"];
+    }
+    if ([defaults valueForKey:@"defaultTower"] == nil) {
+        NSMutableDictionary *defaultTower = [NSMutableDictionary dictionaryWithCapacity:6];
+        
+        [defaultTower setValue:@"38" forKey:@"channel"];
+        [defaultTower setValue:[NSNumber numberWithFloat:39.33472] forKey:@"latitude"];
+        [defaultTower setValue:[NSNumber numberWithFloat:-76.65083] forKey:@"longitude"];
+        [defaultTower setValue:@"1000.  kW" forKey:@"power"];
+        [defaultTower setValue:@"2" forKey:@"psip"];
+        [defaultTower setValue:@"WMAR-TV" forKey:@"stationName"];
+        
+        [defaults setObject:defaultTower forKey:@"defaultTower"];
+    }
+    
     UIViewController *viewController1 = [[TWFFirstViewController alloc] initWithNibName:@"TWFFirstViewController" bundle:nil];
-    UIViewController *viewController2 = [[TWFSecondViewController alloc] initWithNibName:@"TWFSecondViewController" bundle:nil];
+    //UIViewController *viewController2 = [[TWFSecondViewController alloc] initWithNibName:@"TWFSecondViewController" bundle:nil];
+    UITableViewController *settingsViewController = [[SettingsTableView alloc] initWithNibName:@"SettingsTableView" bundle:nil];
+    UINavigationController *settingNavigationController = [[UINavigationController alloc] initWithRootViewController:settingsViewController];
+    settingNavigationController.navigationBar.barStyle = UIBarStyleBlack;
     self.tabBarController = [[UITabBarController alloc] init];
-    self.tabBarController.viewControllers = [NSArray arrayWithObjects:viewController1, viewController2, nil];
+    self.tabBarController.viewControllers = [NSArray arrayWithObjects:viewController1, settingNavigationController, nil];
     self.window.rootViewController = self.tabBarController;
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackOpaque animated:NO];
     [self.window makeKeyAndVisible];
     return YES;
 }
