@@ -21,7 +21,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         self.title = NSLocalizedString(@"Compass", @"Compass");
-        self.tabBarItem.image = [UIImage imageNamed:@"first"];
+        self.tabBarItem.image = [UIImage imageNamed:@"71-compass"];
     }
     return self;
 }
@@ -69,8 +69,8 @@
     toCoord.latitude = towerLatitude;
     toCoord.longitude = towerLongitude;
     
-    NSLog(@"Tower: %f / %f",towerLatitude,towerLongitude);
-    NSLog(@"Current Loc: %f / %f",location.coordinate.latitude,location.coordinate.longitude);
+    //NSLog(@"Tower: %f / %f",towerLatitude,towerLongitude);
+    //NSLog(@"Current Loc: %f / %f",location.coordinate.latitude,location.coordinate.longitude);
     
     CLLocation *towerLoc = [[CLLocation alloc] initWithLatitude:towerLatitude longitude:towerLongitude];
     headingToTower = [self getHeadingForDirectionFromCoordinate:location.coordinate toCoordinate:toCoord];

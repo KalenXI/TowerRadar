@@ -41,9 +41,10 @@
     //UIViewController *viewController2 = [[TWFSecondViewController alloc] initWithNibName:@"TWFSecondViewController" bundle:nil];
     UITableViewController *settingsViewController = [[SettingsTableView alloc] initWithNibName:@"SettingsTableView" bundle:nil];
     UINavigationController *settingNavigationController = [[UINavigationController alloc] initWithRootViewController:settingsViewController];
+    MapViewController *mapViewController = [[MapViewController alloc] initWithNibName:@"MapViewController" bundle:nil];
     settingNavigationController.navigationBar.barStyle = UIBarStyleBlack;
     self.tabBarController = [[UITabBarController alloc] init];
-    self.tabBarController.viewControllers = [NSArray arrayWithObjects:viewController1, settingNavigationController, nil];
+    self.tabBarController.viewControllers = [NSArray arrayWithObjects:viewController1, mapViewController, settingNavigationController, nil];
     self.window.rootViewController = self.tabBarController;
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackOpaque animated:NO];
     [self.window makeKeyAndVisible];

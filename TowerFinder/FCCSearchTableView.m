@@ -24,11 +24,22 @@
     self = [super initWithStyle:UITableViewStylePlain];
     if (self) {
         searchType = 0;
-        self.title = @"Nearby TV Stations";
+        self.title = @"TV Stations";
+        UIBarButtonItem *refreshButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh
+                                                                                       target:self
+                                                                                       action:@selector(refreshList)];
+        self.navigationItem.rightBarButtonItem = refreshButton;
+        gettingTVstations = NO;
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        dataArray = [defaults objectForKey:@"lastTVSearch"];
+        [defaults setInteger:0 forKey:@"lastSearchType"];
         alreadyUpdated = NO;
         CLController = [[CoreLocationController alloc] init];
         CLController.delegate = self;
-        [CLController.locMgr startUpdatingLocation];
+        if (dataArray == nil) {
+            gettingTVstations = YES;
+            [CLController.locMgr startUpdatingLocation];
+        }
     }
     return self;
 }
@@ -37,11 +48,25 @@
     self = [super initWithStyle:UITableViewStylePlain];
     if (self) {
         searchType = 1;
-        self.title = @"Nearby FM Stations";
+        self.title = @"FM Stations";
+        UIBarButtonItem *refreshButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh
+                                                                                       target:self
+                                                                                       action:@selector(refreshList)];
+        self.navigationItem.rightBarButtonItem = refreshButton;
+        alreadyUpdated = NO;
+        gettingTVstations = NO;
+        CLController = [[CoreLocationController alloc] init];
+        CLController.delegate = self;
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        dataArray = [defaults objectForKey:@"lastFMSearch"];
+        [defaults setInteger:1 forKey:@"lastSearchType"];
         alreadyUpdated = NO;
         CLController = [[CoreLocationController alloc] init];
         CLController.delegate = self;
-        [CLController.locMgr startUpdatingLocation];
+        if (dataArray == nil) {
+            gettingTVstations = YES;
+            [CLController.locMgr startUpdatingLocation];
+        }
     }
     return self;
 }
@@ -50,11 +75,25 @@
     self = [super initWithStyle:UITableViewStylePlain];
     if (self) {
         searchType = 2;
-        self.title = @"Nearby AM Stations";
+        self.title = @"AM Stations";
+        UIBarButtonItem *refreshButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh
+                                                                                       target:self
+                                                                                       action:@selector(refreshList)];
+        self.navigationItem.rightBarButtonItem = refreshButton;
+        alreadyUpdated = NO;
+        gettingTVstations = NO;
+        CLController = [[CoreLocationController alloc] init];
+        CLController.delegate = self;
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        dataArray = [defaults objectForKey:@"lastAMSearch"];
+        [defaults setInteger:2 forKey:@"lastSearchType"];
         alreadyUpdated = NO;
         CLController = [[CoreLocationController alloc] init];
         CLController.delegate = self;
-        [CLController.locMgr startUpdatingLocation];
+        if (dataArray == nil) {
+            gettingTVstations = YES;
+            [CLController.locMgr startUpdatingLocation];
+        }
     }
     return self;
 }
@@ -116,6 +155,14 @@
 
 #pragma mark - Table view data source
 
+- (void)refreshList {
+    NSLog(@"Freshin' the list!");
+    alreadyUpdated = NO;
+    gettingTVstations = YES;
+    [CLController.locMgr startUpdatingLocation];
+    
+}
+
 - (void)locationUpdate:(CLLocation *)location {
     if (alreadyUpdated == NO) {
         [CLController.locMgr stopUpdatingLocation];
@@ -135,7 +182,7 @@
     NSLog(@"Raw data: %@",rawArray);
     dataArray = [NSMutableArray arrayWithCapacity:1];
     if (searchType == 0) {
-        int numStations = [rawArray count] / 38;
+        int numStations = ([rawArray count] - 1) / 39;
         NSLog(@"Stations found: %i",numStations);
         
         for (int x = 0; x < numStations; x++) {
@@ -178,7 +225,7 @@
             NSLog(@"Station: %@",station);
         }
     } else if (searchType == 1) {
-        int numStations = [rawArray count] / 38;
+        int numStations = ([rawArray count] - 1) / 38;
         NSLog(@"Stations found: %i",numStations);
         
         for (int x = 0; x < numStations; x++) {
@@ -220,7 +267,7 @@
         }
 
     } else if (searchType == 2) {
-        int numStations = [rawArray count] / 36;
+        int numStations = ([rawArray count] - 8) / 36;
         NSLog(@"Stations found: %i",numStations);
         
         for (int x = 0; x < numStations; x++) {
@@ -261,7 +308,15 @@
             NSLog(@"Station: %@",station);
         }
     }
-    [self.tableView reloadData];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:dataArray forKey:@"lastTowerSearch"];
+    if (searchType == 0)
+        [defaults setObject:dataArray forKey:@"lastTVSearch"];
+    else if (searchType == 1)
+        [defaults setObject:dataArray forKey:@"lastFMSearch"];
+    else if (searchType == 2)
+        [defaults setObject:dataArray forKey:@"lastAMSearch"];
+    [self.tableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:NO];
 }
 
 - (void) receivedData:(NSData *)data {
@@ -273,7 +328,7 @@
 -(void)getTVStationsForLocation:(CLLocation *)location {
     NSLog(@"Getting TV stations...");
     gettingTVstations = YES;
-    [self.tableView reloadData];
+    [self.tableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:NO];
     float signLat;
     float signLong;
     int latDeg;
@@ -341,7 +396,7 @@
 {
     // Return the number of rows in the section.
     NSLog(@"Number of rows? %i",[dataArray count]);
-    if (dataArray == nil) {
+    if ((dataArray == nil) || (gettingTVstations == YES)) {
         return 1;
     } else {
         return [dataArray count];
@@ -354,11 +409,12 @@
     NSLog(@"Reloading data");
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
-    if ((currentLoc == nil) || (gettingTVstations == YES)) {
+    if ((dataArray == nil) || (gettingTVstations == YES)) {
         if (cell == nil) {
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
         }
         cell.textLabel.text = @"Searching for stations...";
+        cell.detailTextLabel.text = @"";
         UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
         spinner.frame = CGRectMake(0, 0, 24, 24);
         cell.accessoryView = spinner;

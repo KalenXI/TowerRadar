@@ -14,8 +14,8 @@
 {
     self = [super initWithStyle:style];
     if (self) {
-        self.title = NSLocalizedString(@"Settings", @"Settings");
-        self.tabBarItem.image = [UIImage imageNamed:@"gear"];
+        self.title = NSLocalizedString(@"Towers", @"Towers");
+        self.tabBarItem.image = [UIImage imageNamed:@"73-radar"];
     }
     return self;
 }
@@ -24,8 +24,8 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = NSLocalizedString(@"Settings", @"Settings");
-        self.tabBarItem.image = [UIImage imageNamed:@"gear"];
+        self.title = NSLocalizedString(@"Towers", @"Towers");
+        self.tabBarItem.image = [UIImage imageNamed:@"73-radar"];
     }
     return self;
 }
@@ -105,7 +105,7 @@
     if (section == 0)
         return @"Current Tower";
     else
-        return @"Options";
+        return @"Search Options";
     
 }
 

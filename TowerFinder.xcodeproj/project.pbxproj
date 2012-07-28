@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		092403B015B4E01700127E1B /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 092403AE15B4E01700127E1B /* MapViewController.m */; };
+		092403B115B4E01700127E1B /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 092403AF15B4E01700127E1B /* MapViewController.xib */; };
+		092403B415B4E0F400127E1B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 092403B315B4E0F400127E1B /* MapKit.framework */; };
+		092403BC15B4ED5800127E1B /* TowerAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 092403BB15B4ED5800127E1B /* TowerAnnotation.m */; };
 		094BBFCE15B385D5005468E8 /* TowerListTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 094BBFCD15B385D5005468E8 /* TowerListTableView.m */; };
 		094BBFD215B3885D005468E8 /* FCCSearchTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 094BBFD115B3885D005468E8 /* FCCSearchTableView.m */; };
 		094BBFD515B45A71005468E8 /* SearchRadiusTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 094BBFD415B45A71005468E8 /* SearchRadiusTableView.m */; };
@@ -14,6 +18,18 @@
 		094BBFDF15B4823C005468E8 /* icon-small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 094BBFDB15B4823C005468E8 /* icon-small@2x.png */; };
 		094BBFE315B48255005468E8 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 094BBFE215B48255005468E8 /* icon@2x.png */; };
 		094BBFE515B48264005468E8 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 094BBFE415B48264005468E8 /* icon.png */; };
+		096B89A415C43E9400794FF3 /* 71-compass.png in Resources */ = {isa = PBXBuildFile; fileRef = 096B89A215C43E9400794FF3 /* 71-compass.png */; };
+		096B89A515C43E9400794FF3 /* 71-compass@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 096B89A315C43E9400794FF3 /* 71-compass@2x.png */; };
+		096B89A915C43EBD00794FF3 /* 103-map.png in Resources */ = {isa = PBXBuildFile; fileRef = 096B89A715C43EBD00794FF3 /* 103-map.png */; };
+		096B89AA15C43EBD00794FF3 /* 103-map@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 096B89A815C43EBD00794FF3 /* 103-map@2x.png */; };
+		096B89AD15C43F7F00794FF3 /* 73-radar.png in Resources */ = {isa = PBXBuildFile; fileRef = 096B89AB15C43F7F00794FF3 /* 73-radar.png */; };
+		096B89AE15C43F7F00794FF3 /* 73-radar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 096B89AC15C43F7F00794FF3 /* 73-radar@2x.png */; };
+		096B89B715C450EE00794FF3 /* annotationButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 096B89B315C450EE00794FF3 /* annotationButton.png */; };
+		096B89B815C450EE00794FF3 /* annotationButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 096B89B415C450EE00794FF3 /* annotationButton@2x.png */; };
+		096B89B915C450EE00794FF3 /* annotationButtonPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 096B89B515C450EE00794FF3 /* annotationButtonPressed.png */; };
+		096B89BA15C450EE00794FF3 /* annotationButtonPressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 096B89B615C450EE00794FF3 /* annotationButtonPressed@2x.png */; };
+		096B89C115C4556200794FF3 /* 74-location.png in Resources */ = {isa = PBXBuildFile; fileRef = 096B89BF15C4556200794FF3 /* 74-location.png */; };
+		096B89C215C4556200794FF3 /* 74-location@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 096B89C015C4556200794FF3 /* 74-location@2x.png */; };
 		09A76A7F15AF676D003D00A4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09A76A7E15AF676D003D00A4 /* UIKit.framework */; };
 		09A76A8115AF676D003D00A4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09A76A8015AF676D003D00A4 /* Foundation.framework */; };
 		09A76A8315AF676D003D00A4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09A76A8215AF676D003D00A4 /* CoreGraphics.framework */; };
@@ -39,6 +55,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		092403AD15B4E01700127E1B /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		092403AE15B4E01700127E1B /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		092403AF15B4E01700127E1B /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
+		092403B315B4E0F400127E1B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		092403BA15B4ED5800127E1B /* TowerAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TowerAnnotation.h; sourceTree = "<group>"; };
+		092403BB15B4ED5800127E1B /* TowerAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TowerAnnotation.m; sourceTree = "<group>"; };
 		094BBFCC15B385D5005468E8 /* TowerListTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TowerListTableView.h; sourceTree = "<group>"; };
 		094BBFCD15B385D5005468E8 /* TowerListTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TowerListTableView.m; sourceTree = "<group>"; };
 		094BBFD015B3885D005468E8 /* FCCSearchTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCCSearchTableView.h; sourceTree = "<group>"; };
@@ -49,6 +71,18 @@
 		094BBFDB15B4823C005468E8 /* icon-small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-small@2x.png"; sourceTree = "<group>"; };
 		094BBFE215B48255005468E8 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
 		094BBFE415B48264005468E8 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		096B89A215C43E9400794FF3 /* 71-compass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "71-compass.png"; sourceTree = "<group>"; };
+		096B89A315C43E9400794FF3 /* 71-compass@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "71-compass@2x.png"; sourceTree = "<group>"; };
+		096B89A715C43EBD00794FF3 /* 103-map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "103-map.png"; sourceTree = "<group>"; };
+		096B89A815C43EBD00794FF3 /* 103-map@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "103-map@2x.png"; sourceTree = "<group>"; };
+		096B89AB15C43F7F00794FF3 /* 73-radar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "73-radar.png"; sourceTree = "<group>"; };
+		096B89AC15C43F7F00794FF3 /* 73-radar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "73-radar@2x.png"; sourceTree = "<group>"; };
+		096B89B315C450EE00794FF3 /* annotationButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = annotationButton.png; sourceTree = "<group>"; };
+		096B89B415C450EE00794FF3 /* annotationButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "annotationButton@2x.png"; sourceTree = "<group>"; };
+		096B89B515C450EE00794FF3 /* annotationButtonPressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = annotationButtonPressed.png; sourceTree = "<group>"; };
+		096B89B615C450EE00794FF3 /* annotationButtonPressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "annotationButtonPressed@2x.png"; sourceTree = "<group>"; };
+		096B89BF15C4556200794FF3 /* 74-location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "74-location.png"; sourceTree = "<group>"; };
+		096B89C015C4556200794FF3 /* 74-location@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "74-location@2x.png"; sourceTree = "<group>"; };
 		09A76A7A15AF676D003D00A4 /* TowerRadar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TowerRadar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09A76A7E15AF676D003D00A4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		09A76A8015AF676D003D00A4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -85,6 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				092403B415B4E0F400127E1B /* MapKit.framework in Frameworks */,
 				09A76AC815AFBABC003D00A4 /* CoreLocation.framework in Frameworks */,
 				09A76A7F15AF676D003D00A4 /* UIKit.framework in Frameworks */,
 				09A76A8115AF676D003D00A4 /* Foundation.framework in Frameworks */,
@@ -117,6 +152,7 @@
 		09A76A7D15AF676D003D00A4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				092403B315B4E0F400127E1B /* MapKit.framework */,
 				09A76AC715AFBABC003D00A4 /* CoreLocation.framework */,
 				09A76A7E15AF676D003D00A4 /* UIKit.framework */,
 				09A76A8015AF676D003D00A4 /* Foundation.framework */,
@@ -133,6 +169,10 @@
 				09A76ACA15AFBAF2003D00A4 /* CoreLocationController.m */,
 				09A76A8D15AF676D003D00A4 /* TWFAppDelegate.h */,
 				09A76A8E15AF676D003D00A4 /* TWFAppDelegate.m */,
+				092403AD15B4E01700127E1B /* MapViewController.h */,
+				092403AE15B4E01700127E1B /* MapViewController.m */,
+				092403BA15B4ED5800127E1B /* TowerAnnotation.h */,
+				092403BB15B4ED5800127E1B /* TowerAnnotation.m */,
 				09A76A9015AF676D003D00A4 /* TWFFirstViewController.h */,
 				09A76A9115AF676D003D00A4 /* TWFFirstViewController.m */,
 				09A76AAD15AF915D003D00A4 /* SettingsTableView.h */,
@@ -143,6 +183,7 @@
 				094BBFCD15B385D5005468E8 /* TowerListTableView.m */,
 				094BBFD015B3885D005468E8 /* FCCSearchTableView.h */,
 				094BBFD115B3885D005468E8 /* FCCSearchTableView.m */,
+				092403AF15B4E01700127E1B /* MapViewController.xib */,
 				09A76AAF15AF915D003D00A4 /* SettingsTableView.xib */,
 				09A76A9E15AF676D003D00A4 /* TWFFirstViewController.xib */,
 				09A76AA115AF676D003D00A4 /* TWFSecondViewController.xib */,
@@ -165,8 +206,20 @@
 		09A76ACC15AFBB01003D00A4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				096B89A715C43EBD00794FF3 /* 103-map.png */,
+				096B89AB15C43F7F00794FF3 /* 73-radar.png */,
+				096B89AC15C43F7F00794FF3 /* 73-radar@2x.png */,
+				096B89A815C43EBD00794FF3 /* 103-map@2x.png */,
+				096B89A215C43E9400794FF3 /* 71-compass.png */,
+				096B89A315C43E9400794FF3 /* 71-compass@2x.png */,
+				096B89BF15C4556200794FF3 /* 74-location.png */,
+				096B89C015C4556200794FF3 /* 74-location@2x.png */,
 				094BBFDA15B4823C005468E8 /* icon-small.png */,
 				094BBFDB15B4823C005468E8 /* icon-small@2x.png */,
+				096B89B315C450EE00794FF3 /* annotationButton.png */,
+				096B89B415C450EE00794FF3 /* annotationButton@2x.png */,
+				096B89B515C450EE00794FF3 /* annotationButtonPressed.png */,
+				096B89B615C450EE00794FF3 /* annotationButtonPressed@2x.png */,
 				09A76ABF15AFB7E3003D00A4 /* Compass-Arrow.png */,
 				09A76ABB15AFB6A6003D00A4 /* Compass-Ring.png */,
 				09A76AC115AFB899003D00A4 /* Compass-BG.png */,
@@ -247,6 +300,19 @@
 				094BBFDF15B4823C005468E8 /* icon-small@2x.png in Resources */,
 				094BBFE315B48255005468E8 /* icon@2x.png in Resources */,
 				094BBFE515B48264005468E8 /* icon.png in Resources */,
+				092403B115B4E01700127E1B /* MapViewController.xib in Resources */,
+				096B89A415C43E9400794FF3 /* 71-compass.png in Resources */,
+				096B89A515C43E9400794FF3 /* 71-compass@2x.png in Resources */,
+				096B89A915C43EBD00794FF3 /* 103-map.png in Resources */,
+				096B89AA15C43EBD00794FF3 /* 103-map@2x.png in Resources */,
+				096B89AD15C43F7F00794FF3 /* 73-radar.png in Resources */,
+				096B89AE15C43F7F00794FF3 /* 73-radar@2x.png in Resources */,
+				096B89B715C450EE00794FF3 /* annotationButton.png in Resources */,
+				096B89B815C450EE00794FF3 /* annotationButton@2x.png in Resources */,
+				096B89B915C450EE00794FF3 /* annotationButtonPressed.png in Resources */,
+				096B89BA15C450EE00794FF3 /* annotationButtonPressed@2x.png in Resources */,
+				096B89C115C4556200794FF3 /* 74-location.png in Resources */,
+				096B89C215C4556200794FF3 /* 74-location@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +331,8 @@
 				094BBFCE15B385D5005468E8 /* TowerListTableView.m in Sources */,
 				094BBFD215B3885D005468E8 /* FCCSearchTableView.m in Sources */,
 				094BBFD515B45A71005468E8 /* SearchRadiusTableView.m in Sources */,
+				092403B015B4E01700127E1B /* MapViewController.m in Sources */,
+				092403BC15B4ED5800127E1B /* TowerAnnotation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

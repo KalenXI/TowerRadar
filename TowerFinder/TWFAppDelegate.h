@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "SettingsTableView.h"
+#import "MapViewController.h"
 
 @interface TWFAppDelegate : UIResponder <UIApplicationDelegate, UITabBarControllerDelegate>
 
